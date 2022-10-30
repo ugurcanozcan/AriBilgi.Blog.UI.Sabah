@@ -1,0 +1,31 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+<h1 class="mt-4">Kategoriler</h1>
+<ol class="breadcrumb mb-4">
+    <li class="breadcrumb-item">Yönetim Paneli</li>
+    <li class="breadcrumb-item active">Kategoriler</li>
+</ol>
+
+<div class="row" ng-app="CategoryApp" ng-controller="CategoryController">
+    <div class="col-md-12">
+        <table class="table table-bordered table-hover">
+            <thead>
+                <tr>
+                    <td>Id</td>
+                    <td>Kategori Adı</td>
+                    <td>Durum</td>
+                    <td></td>
+                </tr>
+            </thead>
+        </table>
+    </div>
+</div>
+
+
+@section Scripts{
+    <script src="~/Admin/pages/category.js"></script>
+ }
