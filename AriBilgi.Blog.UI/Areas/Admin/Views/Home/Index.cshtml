@@ -5,3 +5,14 @@
     Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
 }
 
+<div ng-app="HomeApp" ng-controller="HomeController">
+
+    <p ng-repeat="user in UserList">{{user}}</p>
+
+
+</div>
+
+
+@section Scripts{
+    <script src="~/Admin/pages/home.js"></script>
+ }

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "Ymh2wTZj5octg1cEV+Z8Mng64JmM70hG0jNII7LYbys=",
+  "Hash": "ip0K07YL8ngBBMIULfv4r+OgMTEBnS2V4glr04Z88Fg=",
   "Source": "AriBilgi.Blog.UI",
   "BasePath": "_content/AriBilgi.Blog.UI",
   "Mode": "Default",
@@ -134,6 +134,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Admin\\js\\scripts.js"
+    },
+    {
+      "Identity": "C:\\Users\\PC\\source\\repos\\Ugurcan\\AriBilgi.Blog.UI\\AriBilgi.Blog.UI\\wwwroot\\Admin\\pages\\home.js",
+      "SourceId": "AriBilgi.Blog.UI",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\PC\\source\\repos\\Ugurcan\\AriBilgi.Blog.UI\\AriBilgi.Blog.UI\\wwwroot\\",
+      "BasePath": "_content/AriBilgi.Blog.UI",
+      "RelativePath": "Admin/pages/home.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Admin\\pages\\home.js"
     },
     {
       "Identity": "C:\\Users\\PC\\source\\repos\\Ugurcan\\AriBilgi.Blog.UI\\AriBilgi.Blog.UI\\wwwroot\\favicon.ico",
