@@ -1,0 +1,38 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+<h1 class="mt-4">Kategori Düzenle</h1>
+<ol class="breadcrumb mb-4">
+    <li class="breadcrumb-item">Yönetim Paneli</li>
+    <li class="breadcrumb-item">Kategoriler</li>
+    <li class="breadcrumb-item active">Kategori Düzenle</li>
+</ol>
+
+<div class="row" ng-app="CategoryEditApp" ng-controller="CategoryEditController">
+
+    <div class="col-md-12">
+
+        <div class="form-group">
+            <label>Kategori Adı</label>
+            <input class="form-control" ng-model="category.name" />
+        </div>
+
+        <div class="form-group">
+            <label>Kategori Açıklaması</label>
+            <input class="form-control" ng-model="category.description" />
+        </div>
+
+        <div class="form-group">
+            <a class="btn btn-success" ng-click="CategoryUpdate()">Güncelle</a>
+        </div>
+
+    </div>
+
+</div>
+
+@section Scripts{
+    <script src="~/Admin/pages/categoryEdit.js"></script>
+}

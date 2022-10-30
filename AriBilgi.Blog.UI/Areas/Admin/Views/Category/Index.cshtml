@@ -12,6 +12,7 @@
 
 <div class="row" ng-app="CategoryApp" ng-controller="CategoryController">
     <div class="col-md-12">
+        <a href="/Admin/Category/Add" class="btn-sm btn-success float-right mb-2">Yeni Ekle</a>
         <table class="table table-bordered table-hover">
             <thead>
                 <tr>
@@ -21,6 +22,17 @@
                     <td></td>
                 </tr>
             </thead>
+            <tbody>
+                <tr ng-repeat="category in categoryList">
+                    <td>{{category.id}}</td>
+                    <td>{{category.name}}</td>
+                    <td>{{category.state}}</td>
+                    <td>
+                        <a ng-click="CategoryDelete(category.id)" class="btn-sm btn-danger">Sil</a>
+                        <a href="/Admin/Category/Edit?Id={{category.id}}" class="btn-sm btn-primary">Düzenle</a>
+                    </td>
+                </tr>
+            </tbody>
         </table>
     </div>
 </div>

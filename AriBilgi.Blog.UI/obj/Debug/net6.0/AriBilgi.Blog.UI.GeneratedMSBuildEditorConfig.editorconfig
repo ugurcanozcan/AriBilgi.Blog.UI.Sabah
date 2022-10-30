@@ -11,9 +11,17 @@ build_property.RootNamespace = AriBilgi.Blog.UI
 build_property.ProjectDir = C:\Users\PC\source\repos\Ugurcan\AriBilgi.Blog.UI\AriBilgi.Blog.UI\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
-build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = true
 build_property.MSBuildProjectDirectory = C:\Users\PC\source\repos\Ugurcan\AriBilgi.Blog.UI\AriBilgi.Blog.UI
 build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/PC/source/repos/Ugurcan/AriBilgi.Blog.UI/AriBilgi.Blog.UI/Areas/Admin/Views/Category/Add.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ2F0ZWdvcnlcQWRkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/PC/source/repos/Ugurcan/AriBilgi.Blog.UI/AriBilgi.Blog.UI/Areas/Admin/Views/Category/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ2F0ZWdvcnlcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/PC/source/repos/Ugurcan/AriBilgi.Blog.UI/AriBilgi.Blog.UI/Areas/Admin/Views/Category/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ2F0ZWdvcnlcSW5kZXguY3NodG1s
