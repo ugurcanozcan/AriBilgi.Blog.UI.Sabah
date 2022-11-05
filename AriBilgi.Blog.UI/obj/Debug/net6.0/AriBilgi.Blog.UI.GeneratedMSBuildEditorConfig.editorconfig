@@ -15,6 +15,10 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes = true
 build_property.MSBuildProjectDirectory = C:\Users\PC\source\repos\Ugurcan\AriBilgi.Blog.UI\AriBilgi.Blog.UI
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/PC/source/repos/Ugurcan/AriBilgi.Blog.UI/AriBilgi.Blog.UI/Areas/Admin/Views/Article/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQXJ0aWNsZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/PC/source/repos/Ugurcan/AriBilgi.Blog.UI/AriBilgi.Blog.UI/Areas/Admin/Views/Category/Add.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ2F0ZWdvcnlcQWRkLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 

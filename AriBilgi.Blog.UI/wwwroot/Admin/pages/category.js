@@ -26,4 +26,14 @@ app.controller("CategoryController", function ($scope, $http) {
         });
     }
 
+    $scope.CategoryActive = function (id) {
+        $http({
+            method: "PUT",
+            url: "https://localhost:7071/api/Category/SetActive?categoryId=" + id
+        }).then(function (response) {
+            alert("Kategori aktifleştirildi.");
+            $scope.GetCategoryList();
+        });
+    }
+
 });

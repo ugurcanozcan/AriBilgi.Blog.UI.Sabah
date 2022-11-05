@@ -28,7 +28,8 @@
                     <td>{{category.name}}</td>
                     <td>{{category.state}}</td>
                     <td>
-                        <a ng-click="CategoryDelete(category.id)" class="btn-sm btn-danger">Sil</a>
+                        <a ng-click="CategoryDelete(category.id)" ng-show="category.state=='Aktif'" class="btn-sm btn-danger">Sil</a>
+                        <a class="btn-sm btn-warning" ng-click="CategoryActive(category.id)" ng-show="category.state=='Silindi'">Aktif Et</a>
                         <a href="/Admin/Category/Edit?Id={{category.id}}" class="btn-sm btn-primary">Düzenle</a>
                     </td>
                 </tr>

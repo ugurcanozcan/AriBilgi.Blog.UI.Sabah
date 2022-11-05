@@ -1,0 +1,45 @@
+﻿@{
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+<h1 class="mt-4">Makaleler</h1>
+<ol class="breadcrumb mb-4">
+    <li class="breadcrumb-item">Yönetim Paneli</li>
+    <li class="breadcrumb-item active">Makaleler</li>
+</ol>
+
+<div class="row" ng-app="ArticleApp" ng-controller="ArticleController">
+    <div class="col-md-12">
+        <a href="/Admin/Article/Add" class="btn-sm btn-success float-right mb-2">Yeni Ekle</a>
+        <table class="table table-bordered table-hover">
+            <thead>
+                <tr>
+                    <td>Id</td>
+                    <td>Makale Adı</td>
+                    <td>Paylaşan</td>
+                    <td>Kategorisi</td>
+                    <td>Durum</td>
+                    <td></td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="article in articleList">
+                    <td>{{article.id}}</td>
+                    <td>{{article.title}}</td>
+                    <td>{{article.user.name}} {{article.user.surname}}</td>
+                    <td>{{article.category.name}}</td>
+                    <td>{{article.state}}</td>
+                    <td>
+                        <a ng-click="ArticleDelete(article.id)" ng-show="article.state=='Aktif'" class="btn-sm btn-danger">Sil</a>
+                        <a class="btn-sm btn-warning" ng-click="ArticleActive(article.id)" ng-show="article.state=='Silindi'">Aktif Et</a>
+                        <a href="/Admin/Category/Edit?Id={{category.id}}" class="btn-sm btn-primary">Düzenle</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
+@section Scripts{
+    <script src="~/Admin/pages/article.js"></script>
+ }
