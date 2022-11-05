@@ -1,0 +1,50 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+<h1 class="mt-4">Makale Ekle</h1>
+<ol class="breadcrumb mb-4">
+    <li class="breadcrumb-item">Yönetim Paneli</li>
+    <li class="breadcrumb-item">Makaleler</li>
+    <li class="breadcrumb-item active">Makale Ekle</li>
+</ol>
+
+<div class="row" ng-app="ArticleAddApp" ng-controller="ArticleAddController">
+
+    <div class="col-md-12">
+
+        <div class="form-group">
+            <label>Makale Başlığı</label>
+            <input class="form-control" ng-model="article.title" />
+        </div>
+
+        <div class="form-group">
+            <label>Kategori Seçiniz</label>
+            <select class="form-control" ng-model="article.categoryId">
+                
+                <option ng-value="">Lütfen bir kategori seçiniz.</option>
+                <option ng-repeat="category in categoryList" ng-value="category.id">{{category.name}}</option>
+               
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label>Makale İçeriği</label>
+            <input class="form-control" ng-model="article.content" />
+        </div>
+
+       
+
+        <div class="form-group">
+            <a class="btn btn-success" ng-click="ArticleAdd()">Ekle</a>
+        </div>
+
+    </div>
+
+</div>
+
+@section Scripts{
+    <script src="~/Admin/pages/articleAdd.js"></script>
+}

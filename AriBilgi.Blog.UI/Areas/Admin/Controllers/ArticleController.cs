@@ -9,5 +9,13 @@ namespace AriBilgi.Blog.UI.Areas.Admin.Controllers
         {
             return View();
         }
+        public IActionResult Add()
+        {
+            return View();
+        }
+        public IActionResult Edit()
+        {
+            return View();
+        }
     }
 }

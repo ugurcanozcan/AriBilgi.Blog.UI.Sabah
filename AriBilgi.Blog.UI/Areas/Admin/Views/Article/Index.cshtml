@@ -31,7 +31,7 @@
                     <td>
                         <a ng-click="ArticleDelete(article.id)" ng-show="article.state=='Aktif'" class="btn-sm btn-danger">Sil</a>
                         <a class="btn-sm btn-warning" ng-click="ArticleActive(article.id)" ng-show="article.state=='Silindi'">Aktif Et</a>
-                        <a href="/Admin/Category/Edit?Id={{category.id}}" class="btn-sm btn-primary">Düzenle</a>
+                        <a href="/Admin/Article/Edit?Id={{article.id}}" class="btn-sm btn-primary">Düzenle</a>
                     </td>
                 </tr>
             </tbody>
