@@ -64,7 +64,7 @@
     <!-- Custom styles for this template -->
     <link href="~/assets/blog.css" rel="stylesheet">
 </head>
-<body>
+<body ng-app="BlogSiteApp">
 
     <div class="container">
         <header class="blog-header lh-1 py-3">
@@ -84,20 +84,11 @@
             </div>
         </header>
 
-        <div class="nav-scroller py-1 mb-2">
+        <div class="nav-scroller py-1 mb-2" ng-controller="MenuController">
             <nav class="nav d-flex justify-content-between">
-                <a class="p-2 link-secondary" href="#">World</a>
-                <a class="p-2 link-secondary" href="#">U.S.</a>
-                <a class="p-2 link-secondary" href="#">Technology</a>
-                <a class="p-2 link-secondary" href="#">Design</a>
-                <a class="p-2 link-secondary" href="#">Culture</a>
-                <a class="p-2 link-secondary" href="#">Business</a>
-                <a class="p-2 link-secondary" href="#">Politics</a>
-                <a class="p-2 link-secondary" href="#">Opinion</a>
-                <a class="p-2 link-secondary" href="#">Science</a>
-                <a class="p-2 link-secondary" href="#">Health</a>
-                <a class="p-2 link-secondary" href="#">Style</a>
-                <a class="p-2 link-secondary" href="#">Travel</a>
+
+                <a class="p-2 link-secondary" href="/Category/Index?Id={{category.id}}" ng-repeat="category in categoryList">{{category.name}}</a>
+
             </nav>
         </div>
     </div>
@@ -115,7 +106,9 @@
         </p>
     </footer>
 
-
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.3/angular.min.js" integrity="sha512-KZmyTq3PLx9EZl0RHShHQuXtrvdJ+m35tuOiwlcZfs/rE7NZv29ygNA8SFCkMXTnYZQK2OX0Gm2qKGfvWEtRXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="~/page/layout.js"></script>
+    @RenderSection("Scripts",false)
 </body>
 </html>
