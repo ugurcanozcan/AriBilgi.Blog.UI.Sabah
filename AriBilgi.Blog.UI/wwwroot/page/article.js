@@ -11,4 +11,19 @@
 
 
     $scope.GetArticle();
+
+
+    $scope.AddComment = function () {
+
+        $scope.addComment.articleId = GetUrlParameter("Id");
+
+        $http({
+            method: "POST",
+            url: "https://localhost:7071/api/Comment/Add",
+            data: $scope.addComment
+        }).then(function (response) {
+            $scope.GetArticle();
+            alert("Yorum Başarıyla Eklenmiştir.");
+        });
+    }
 });
