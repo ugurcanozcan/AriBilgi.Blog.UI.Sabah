@@ -1,6 +1,26 @@
 ﻿var app = angular.module('ArticleAddApp', []);
 
+var file;
+var fileName;
+
 app.controller("ArticleAddController", function ($scope, $http) {
+
+    $("#flpUpload").change(function () {
+
+        const fileReader = new FileReader();
+
+        fileReader.onload = (event) => {
+            file = new Uint8Array(event.target.result).toString();
+        }
+        fileReader.readAsArrayBuffer(event.target.files[0]);
+
+        fileName = event.target.files[0].name;
+
+        $("#articleFilePreview").attr("src", URL.createObjectURL(event.target.files[0]));
+
+    });
+
+
 
     $scope.GetCategoryList = function () {
         $http({
@@ -14,6 +34,10 @@ app.controller("ArticleAddController", function ($scope, $http) {
     $scope.GetCategoryList();
 
     $scope.ArticleAdd = function () {
+
+        $scope.article.file = file;
+        $scope.article.fileName = fileName;
+
         $http({
             method: "POST",
             url: "https://localhost:7071/api/Article/Add",
