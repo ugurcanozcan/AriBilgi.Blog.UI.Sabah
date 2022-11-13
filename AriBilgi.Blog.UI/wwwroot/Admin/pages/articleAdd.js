@@ -37,6 +37,7 @@ app.controller("ArticleAddController", function ($scope, $http) {
 
         $scope.article.file = file;
         $scope.article.fileName = fileName;
+        $scope.article.content = CKEDITOR.instances['editor'].getData();
 
         $http({
             method: "POST",
@@ -46,5 +47,7 @@ app.controller("ArticleAddController", function ($scope, $http) {
             alert("Makale başarıyla eklenmiştir.");
         })
     }
+
+   
 
 });

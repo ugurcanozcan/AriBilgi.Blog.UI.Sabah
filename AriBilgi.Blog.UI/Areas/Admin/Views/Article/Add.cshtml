@@ -41,7 +41,7 @@
 
         <div class="form-group">
             <label>Makale İçeriği</label>
-            <input class="form-control" ng-model="article.content" />
+            <textarea class="form-control" id="editor"></textarea>
         </div>
 
        
@@ -55,5 +55,9 @@
 </div>
 
 @section Scripts{
+    <script src="~/Admin/ckeditor/ckeditor.js"></script>
     <script src="~/Admin/pages/articleAdd.js"></script>
+    <script>
+        CKEDITOR.replace("editor");
+    </script>
 }

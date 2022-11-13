@@ -18,7 +18,7 @@ app.controller("MenuController", function ($scope, $http) {
     $scope.GetCategoryList = function () {
         $http({
             method: "GET",
-            url:"https://localhost:7071/api/Category/GetAllNonDeleted"
+            url: "https://localhost:7071/api/Category/GetAllNonDeleted"
         }).then(function (response) {
             $scope.categoryList = response.data;
         })
@@ -26,7 +26,7 @@ app.controller("MenuController", function ($scope, $http) {
 
     $scope.GetCategoryList();
 
-   
+
 
 });
 

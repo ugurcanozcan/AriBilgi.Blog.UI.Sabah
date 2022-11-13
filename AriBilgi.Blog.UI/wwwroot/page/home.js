@@ -1,4 +1,4 @@
-﻿app.controller("HomeController", function ($scope, $http) {
+﻿app.controller("HomeController", function ($scope, $http, $sce) {
 
     $scope.GetArticleList = function () {
         $http({
@@ -11,5 +11,7 @@
 
     $scope.GetArticleList();
 
-
+    $scope.trustAsHtml = function (html) {
+        return $sce.trustAsHtml(html);
+    }
 })

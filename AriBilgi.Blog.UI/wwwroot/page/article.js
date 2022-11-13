@@ -1,4 +1,4 @@
-﻿app.controller("ArticleController", function ($scope, $http) {
+﻿app.controller("ArticleController", function ($scope, $http, $sce) {
 
     $scope.GetArticle = function () {
         $http({
@@ -25,5 +25,9 @@
             $scope.GetArticle();
             alert("Yorum Başarıyla Eklenmiştir.");
         });
+    }
+
+    $scope.trustAsHtml = function (html) {
+        return $sce.trustAsHtml(html);
     }
 });
