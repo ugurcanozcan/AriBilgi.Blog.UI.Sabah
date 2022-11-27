@@ -1,4 +1,4 @@
-﻿var app = angular.module('CategoryEditApp', []);
+﻿
 
 app.controller("CategoryEditController", function ($scope, $http) {
 
@@ -16,6 +16,7 @@ app.controller("CategoryEditController", function ($scope, $http) {
 
     $http({
         method: "GET",
+        headers: GetHeader(),
         url: "https://localhost:7071/api/Category/Get?categoryId=" + $scope.GetUrlParameter("Id")
     }).then(function (response) {
         $scope.category = response.data;
@@ -24,6 +25,7 @@ app.controller("CategoryEditController", function ($scope, $http) {
     $scope.CategoryUpdate = function () {
         $http({
             method: "PUT",
+            headers: GetHeader(),
             url: "https://localhost:7071/api/Category/Update?categoryId=" + $scope.GetUrlParameter("Id"),
             data: $scope.category
         }).then(function (response) {

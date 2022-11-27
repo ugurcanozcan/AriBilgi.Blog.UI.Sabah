@@ -1,0 +1,29 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    Layout = null;
+}
+<html>
+<head>
+    <link href="~/Admin/css/styles.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="col-md-12 text-center" ng-app="LoginApp" ng-controller="LoginController">
+        <div class="col-md-4">
+            <div class="form-group">
+                <label>Kullanıcı Adı</label>
+                <input class="form-control" ng-model="login.username" />
+            </div>
+            <div class="form-group">
+                <label>Şifre</label>
+                <input class="form-control" type="password" ng-model="login.password" />
+            </div>
+            <a class="btn btn-success" ng-click="Login()">Giriş Yap</a>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.3/angular.min.js" integrity="sha512-KZmyTq3PLx9EZl0RHShHQuXtrvdJ+m35tuOiwlcZfs/rE7NZv29ygNA8SFCkMXTnYZQK2OX0Gm2qKGfvWEtRXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="~/admin/pages/login.js"></script>
+</body>
+</html>

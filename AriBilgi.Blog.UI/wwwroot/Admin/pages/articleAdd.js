@@ -1,5 +1,4 @@
-﻿var app = angular.module('ArticleAddApp', []);
-
+﻿
 var file;
 var fileName;
 
@@ -25,6 +24,7 @@ app.controller("ArticleAddController", function ($scope, $http) {
     $scope.GetCategoryList = function () {
         $http({
             method: "GET",
+            headers: GetHeader(),
             url: "https://localhost:7071/api/Category/GetAllNonDeleted"
         }).then(function (response) {
             $scope.categoryList = response.data;
@@ -41,6 +41,7 @@ app.controller("ArticleAddController", function ($scope, $http) {
 
         $http({
             method: "POST",
+            headers: GetHeader(),
             url: "https://localhost:7071/api/Article/Add",
             data: $scope.article
         }).then(function (response) {

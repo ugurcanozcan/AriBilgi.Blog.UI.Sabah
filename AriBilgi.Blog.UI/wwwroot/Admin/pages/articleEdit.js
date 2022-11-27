@@ -1,4 +1,4 @@
-﻿var app = angular.module('ArticleEditApp', []);
+﻿
 
 app.controller("ArticleEditController", function ($scope, $http) {
 
@@ -16,6 +16,7 @@ app.controller("ArticleEditController", function ($scope, $http) {
 
     $http({
         method: "GET",
+        headers: GetHeader(),
         url: "https://localhost:7071/api/Category/GetAllNonDeleted"
     }).then(function (response) {
         $scope.categoryList = response.data;
@@ -23,6 +24,7 @@ app.controller("ArticleEditController", function ($scope, $http) {
 
     $http({
         method: "GET",
+        headers: GetHeader(),
         url: "https://localhost:7071/api/Article/GetById?id=" + $scope.GetUrlParameter("Id")
     }).then(function (response) {
         $scope.article = response.data;
@@ -34,6 +36,7 @@ app.controller("ArticleEditController", function ($scope, $http) {
     $scope.ArticleEdit = function () {
         $http({
             method: "PUT",
+            headers: GetHeader(),
             url: "https://localhost:7071/api/Article/Update?articleId=" + $scope.GetUrlParameter("Id"),
             data: $scope.article
         }).then(function (response) {
